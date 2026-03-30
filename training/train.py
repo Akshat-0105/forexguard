@@ -103,9 +103,16 @@ def train_with_config(config_name: str = 'baseline',
         logger.info(f"Config saved: {config_json}")
         
         # Save model
-        model_path = f'models/if_model_{config_name}.pkl'
-        scaler_path = f'models/if_scaler_{config_name}.pkl'
+        model_dir = 'models/saved_models'
+        os.makedirs(model_dir, exist_ok=True)
+        
+        model_path = os.path.join(model_dir, 'isolation_forest_model.pkl')
+        scaler_path = os.path.join(model_dir, 'if_scaler.pkl')
+        
         detector.save_model(model_path, scaler_path)
+        
+        logger.info(f"Model saved: {model_path}")
+        logger.info(f"Scaler saved: {scaler_path}")
     
     return {
         'config': config,
