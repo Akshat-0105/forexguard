@@ -1,0 +1,35 @@
+# Core Requirements
+numpy>=1.23.0
+pandas>=1.5.0
+scikit-learn>=1.2.0
+scipy>=1.10.0
+
+# Deep Learning
+torch>=2.0.0
+pytorch-lightning>=2.0.0
+
+# API Framework
+fastapi>=0.104.0
+uvicorn>=0.24.0
+pydantic>=2.0.0
+pydantic-settings>=2.0.0
+
+# Data Validation
+python-multipart>=0.0.6
+
+# Development/Testing
+pytest>=7.0.0
+pytest-asyncio>=0.21.0
+requests>=2.31.0
+
+# Utilities
+python-dotenv>=1.0.0
+python-dateutil>=2.8.2
+pytz>=2023.3
+
+# Monitoring/Logging
+python-json-logger>=2.0.0
+
+# Serialization
+joblib>=1.3.0
+dill>=0.3.7
